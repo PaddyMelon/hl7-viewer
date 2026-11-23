@@ -1,0 +1,58 @@
+name: Feature request
+description: Suggest an idea or improvement
+type: Feature
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > **Never post real patient data.** Use synthetic or fully de-identified HL7 messages only.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: A clear and concise description of the need or problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to happen?
+      description: Describe the feature or change you have in mind.
+    validations:
+      required: true
+
+  - type: upload
+    id: mockups
+    attributes:
+      label: Mockups or screenshots
+      description: Optional. Make sure no real patient data is visible, including file names, tabs, and other open windows.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What alternatives have you considered?
+      description: Other approaches or workarounds, if any.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links, references, or other context.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues and this is not a duplicate
+          required: true
+        - label: This issue contains no real patient data
+          required: true
+        - label: I am willing to submit a pull request for this
+          required: false
